@@ -14,6 +14,7 @@ font-family: 'Onest', sans-serif;
 */
 body{
 	--background-color:#285157;
+	--burgandy: #5a0000
 	/* #38040e;*/
 	--accent-color: #941b0c;
 	--red: #c3001f;
@@ -182,7 +183,7 @@ input, select, textarea {
 	body, input, select, textarea, p {
 		color: var(--black);
 		font-family: "Merriweather", Georgia, serif;
-		font-size: 0.75rem;
+		font-size: 0.8rem;
 		font-weight: 300;
 		letter-spacing: 0.0375em;
 		line-height: 1.5;
@@ -309,7 +310,7 @@ input, select, textarea {
 		}
 
 		h4 {
-			font-size: 0.675rem;
+			font-size: 0.75rem;
 		}
 
 		h5 {
@@ -317,15 +318,24 @@ input, select, textarea {
 		}
 
 	}
+	.hours div{
+		display: grid;
+		grid-template-columns: 30% 40%;
+	}
 
-	.info-details{
-		font-size: .75rem;
+	.wine-details {
+		color: var(--black);
+		font-size: 0.8rem;
+		font-weight: 300;
+		letter-spacing: 0.0375em;
+		line-height: 1.5;
 		font-style: italic;
 		font-family: 'Merriweather', serif;
+		padding: 0 0 0 .5rem;
 	}
 
 	sub {
-		font-size: 0.8rem;
+		font-size: 0.6rem;
 		position: relative;
 		top: 0.5rem;
 	}
@@ -375,11 +385,15 @@ input, select, textarea {
 
 	ul.menu li {
 		display: grid;
-    	grid-template-columns: 55% 45%;
+    	grid-template-columns: 60% 40%;
 	}
 
 	div.hours h3{
-		margin: 0 0 .75rem 0;
+		margin: 0 0 1.25rem 0;
+	}
+
+	ul.wine li{
+		margin:0 0 1rem 0;
 	}
 
 		hr.major {
@@ -2599,13 +2613,15 @@ input, select, textarea {
 					padding-top: 0;
 				}
 
-				ul.alt > li:last-child {
-					padding-bottom: 0;
+				ul > li:last-child {
+					padding-bottom: 1.5rem;
 				}
 
 		ul.items {
 			list-style: none;
 			padding-left: 0;
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
 		}
 
 			ul.items > li {
@@ -2799,7 +2815,7 @@ input, select, textarea {
 			}
 
 				ul.icons li .icon:before {
-					font-size: 1.25rem;
+					font-size: 2rem;
 				}
 
 				ul.icons li .icon:hover {
@@ -2973,7 +2989,7 @@ input, select, textarea {
 		width: calc(100% + 1.25rem);
 	}
 
-		.gallery a {
+		.gallery div {
 			border-bottom: 0;
 			display: block;
 			margin: 1.25rem 0 0 1.25rem;
@@ -2982,7 +2998,7 @@ input, select, textarea {
 			width: calc(50% - 1.25rem);
 		}
 
-			.gallery a img {
+			.gallery div img {
 				display: block;
 				height: 25vw;
 				min-height: 18rem;
@@ -2991,15 +3007,15 @@ input, select, textarea {
 				width: 100%;
 			}
 
-			.gallery a.landscape {
+			.gallery div.landscape {
 				width: 100%;
 			}
 
-				.gallery a.landscape img {
+				.gallery div.landscape img {
 					height: 30vw;
 				}
 
-			.gallery a.portrait img {
+			.gallery div.portrait img {
 				height: 30vw;
 			}
 
@@ -3133,15 +3149,15 @@ input, select, textarea {
 
 		@media screen and (max-width: 1152px) {
 
-			.gallery a img {
+			.gallery div img {
 				height: 20rem;
 			}
 
-			.gallery a.landscape img {
+			.gallery div.landscape img {
 				height: 25rem;
 			}
 
-			.gallery a.portrait img {
+			.gallery div.portrait img {
 				height: 25rem;
 			}
 
@@ -3158,20 +3174,20 @@ input, select, textarea {
 				width: calc(100% + 0.625rem);
 			}
 
-				.gallery a {
+				.gallery div {
 					margin: 0.625rem 0 0 0.625rem;
 					width: calc(50% - 0.625rem);
 				}
 
-					.gallery a img {
+					.gallery div img {
 						height: 20rem;
 					}
 
-					.gallery a.landscape img {
+					.gallery div.landscape img {
 						height: 20rem;
 					}
 
-					.gallery a.portrait img {
+					.gallery div.portrait img {
 						height: 30rem;
 					}
 
@@ -3179,16 +3195,16 @@ input, select, textarea {
 
 		@media screen and (max-width: 480px) {
 
-			.gallery a img {
+			.gallery div img {
 				height: 12rem;
 				min-height: 0;
 			}
 
-			.gallery a.landscape img {
+			.gallery div.landscape img {
 				height: 12rem;
 			}
 
-			.gallery a.portrait img {
+			.gallery div.portrait img {
 				height: 14rem;
 			}
 
@@ -3365,7 +3381,7 @@ input, select, textarea {
 				}
 
 			#wrapper > section > header h1 {
-				margin-top: -2rem;
+				margin-top: -1rem;
 			}
 
 				#wrapper > section > header h1:before {
@@ -3423,11 +3439,10 @@ input, select, textarea {
 			}
 
 		#wrapper .copyright {
-			color: rgba(0, 0, 0, 0.25);
-			font-size: 1rem;
-			left: 70vw;
-			position: relative;
-			width: 30vw;
+			color: rgba(0, 0, 0, 0.6);
+			font-size: .7rem;
+			left: 40vw;
+			position: relative; 
 		}
 
 			#wrapper .copyright a {
